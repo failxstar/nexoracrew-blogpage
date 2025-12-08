@@ -1,7 +1,8 @@
 import React from 'react';
 import { 
   Mail, Phone, MapPin, Code, Globe, Instagram, Linkedin, 
-  FileText, Briefcase, Zap, TrendingUp, Printer, Server, MessageCircle 
+  FileText, Briefcase, Zap, TrendingUp, Printer, Server, MessageCircle,
+  Shield, Puzzle
 } from 'lucide-react';
 
 // Main App Component
@@ -27,8 +28,18 @@ const App = () => {
       { name: 'Growth-Driven SEO & Digital Domination', description: 'Performance-oriented SEO and online reach improvement.', icon: TrendingUp },
       { name: 'Next-Gen Web & Mobile Experience', description: 'Modern website development, mobile-friendly platforms & web apps.', icon: Code },
       { name: 'Printing and Branding Solutions', description: 'Business cards, ID cards, banners, stickers, and promotional material.', icon: Printer },
-      { name: 'Hosting & Support', description: 'Website hosting, maintenance, and technical support.', icon: Globe },
-      { name: 'AI & Automation', description: 'Smart automation tools and AI-focused integrations.', icon: Zap },
+      { name: 'Hosting & Support', description: 'Reliable website hosting, uptime monitoring, technical maintenance, and dedicated support for smooth online operations.', icon: Globe },
+      { name: 'AI & Automation', description: 'Smart AI-driven automation, custom chatbots, workflow optimization, and predictive tools to boost business efficiency.', icon: Zap },
+      { 
+        name: 'Cyber Security Services',
+        description: 'Vulnerability assessments, penetration testing, security audits, malware analysis, and continuous digital protection.',
+        icon: Shield 
+      },
+      {
+        name: 'Chrome Extensions Development',
+        description: 'Custom Chrome extensions to automate tasks, boost productivity, and enhance UX.',
+        icon: Puzzle
+      }
     ]
   };
 
@@ -59,8 +70,7 @@ const App = () => {
 
           <div className="mt-6 border-t border-gray-700 pt-4">
             <p className="text-xl font-bold text-white">{profile.ceo}</p>
-<p className="text-sm font-semibold text-gray-400">FOUNDER & CEO</p>
-
+            <p className="text-sm font-semibold text-gray-400">FOUNDER & CEO</p>
           </div>
         </div>
 
@@ -89,16 +99,17 @@ const App = () => {
               </li>
 
               <li className="flex items-start text-gray-300">
-  <MapPin className="w-5 h-5 mr-3 mt-1 text-cyan-500" />
-  <a 
-    href="https://maps.app.goo.gl/VUpAHD6bsMJE9kzw8" 
-    target="_blank"
-    className="hover:text-cyan-400 transition"
-  >
-    Palakkarai, Tiruchirappalli, Tamil Nadu
-  </a>
-</li>
+                <MapPin className="w-5 h-5 mr-3 mt-1 text-cyan-500" />
+                <a 
+  href="https://maps.app.goo.gl/VUpAHD6bsMJE9kzw8" 
+  target="_blank"
+  rel="noreferrer"
+  className="hover:text-cyan-400 transition"
+>
+  Palakkarai, Tiruchirappalli, Tamil Nadu
+</a>
 
+              </li>
             </ul>
           </div>
 
@@ -111,20 +122,29 @@ const App = () => {
           </div>
 
           {/* Services */}
-          <div className="bg-gray-700/50 p-6 rounded-xl shadow-lg border border-gray-700">
-            <h2 className="text-3xl font-bold text-white mb-6 border-b border-cyan-600 pb-2">Our Services</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              {profile.services.map((service, index) => (
-                <div key={index} className="flex items-start space-x-4 p-4 bg-gray-700 rounded-lg hover:bg-gray-600/70 transition duration-300 hover:shadow-xl">
-                  <service.icon className="w-6 h-6 text-cyan-400 mt-1" />
-                  <div>
-                    <h3 className="text-lg font-semibold text-white">{service.name}</h3>
-                    <p className="text-sm text-gray-400 mt-1">{service.description}</p>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
+<div className="bg-gray-700/50 p-6 rounded-xl shadow-lg border border-gray-700">
+  <h2 className="text-3xl font-bold text-white mb-6 border-b border-cyan-600 pb-2">
+    Our Services
+  </h2>
+
+  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+    {profile.services.map((service, index) => (
+      <div
+        key={index}
+        className="flex flex-col h-40 p-4 bg-gray-700 rounded-lg hover:bg-gray-600/70 transition duration-300 hover:shadow-xl"
+      >
+        <service.icon className="w-6 h-6 text-cyan-400 mb-2" />
+
+        <h3 className="text-lg font-semibold text-white">{service.name}</h3>
+
+        <p className="text-sm text-gray-400 mt-1 line-clamp-3">
+          {service.description}
+        </p>
+      </div>
+    ))}
+  </div>
+</div>
+
 
           {/* Official Links */}
           <div className="bg-gray-700/50 p-6 rounded-xl shadow-lg border border-gray-700">
