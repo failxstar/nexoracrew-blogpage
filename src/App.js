@@ -2,7 +2,7 @@ import React from 'react';
 import { 
   Mail, Phone, MapPin, Code, Globe, Instagram, Linkedin, 
   FileText, Briefcase, Zap, TrendingUp, Printer, Server, MessageCircle,
-  Shield, Puzzle
+  Shield, Puzzle, Youtube, Send
 } from 'lucide-react';
 
 // Main App Component
@@ -13,7 +13,9 @@ const App = () => {
     phone: '9597646460',
     location: 'Palakkarai, Tiruchirappalli, Tamil Nadu',
     tagline: 'Where Ideas Meet Innovation',
-    about: "NEXORA CREW is an emerging IT service and cybersecurity startup founded by engineering students with a passion for innovation, digital transformation, and secure technology solutions. We aim to bring modern, affordable, and growth-focused digital solutions to students, startups, and small businesses.",
+    
+    about:
+      'NEXORA CREW is an emerging IT service and cybersecurity startup founded by engineering students with a passion for innovation, digital transformation, and secure technology solutions. We aim to bring modern, affordable, and growth-focused digital solutions to students, startups, and small businesses.',
     
     links: [
       { name: 'Official Website', url: 'https://nexoracrew.com/', icon: Globe },
@@ -26,35 +28,27 @@ const App = () => {
       { name: 'Enterprise Networking & Server Architecture', description: 'Professional setup for networks, servers, and IT infrastructure.', icon: Server },
       { name: 'Bold Branding & Immersive Visual Design', description: 'Creative logos, brand identity, and digital design solutions.', icon: Briefcase },
       { name: 'Growth-Driven SEO & Digital Domination', description: 'Performance-oriented SEO and online reach improvement.', icon: TrendingUp },
-      { name: 'Next-Gen Web & Mobile Experience', description: 'Modern website development, mobile-friendly platforms & web apps.', icon: Code },
-      { name: 'Printing and Branding Solutions', description: 'Business cards, ID cards, banners, stickers, and promotional material.', icon: Printer },
-      { name: 'Hosting & Support', description: 'Reliable website hosting, uptime monitoring, technical maintenance, and dedicated support for smooth online operations.', icon: Globe },
-      { name: 'AI & Automation', description: 'Smart AI-driven automation, custom chatbots, workflow optimization, and predictive tools to boost business efficiency.', icon: Zap },
-      { 
-        name: 'Cyber Security Services',
-        description: 'Vulnerability assessments, penetration testing, security audits, malware analysis, and continuous digital protection.',
-        icon: Shield 
-      },
-      {
-        name: 'Chrome Extensions Development',
-        description: 'Custom Chrome extensions to automate tasks, boost productivity, and enhance UX.',
-        icon: Puzzle
-      }
-    ]
+      { name: 'Next-Gen Web & Mobile Experience', description: 'Modern website development & web apps.', icon: Code },
+      { name: 'Printing and Branding Solutions', description: 'Business cards, banners, stickers, and promotional materials.', icon: Printer },
+      { name: 'Hosting & Support', description: 'Reliable hosting, uptime monitoring, and technical support.', icon: Globe },
+      { name: 'AI & Automation', description: 'AI-driven automation, custom chatbots, workflow optimization.', icon: Zap },
+      { name: 'Cyber Security Services', description: 'Pentesting, audits, malware analysis, and full protection.', icon: Shield },
+      { name: 'Chrome Extensions Development', description: 'Custom Chrome extensions for automation & UX.', icon: Puzzle },
+    ],
   };
 
   return (
     <div className="min-h-screen bg-gray-900 text-gray-100 p-4 md:p-8 flex justify-center items-start font-inter">
 
       {/* Main Profile Card */}
-      <div className="w-full max-w-4xl bg-gray-800 shadow-2xl rounded-3xl overflow-hidden transform transition duration-500 hover:shadow-cyan-500/30">
+      <div className="w-full max-w-4xl bg-gray-800 shadow-2xl rounded-3xl overflow-hidden hover:shadow-cyan-500/30 transition">
 
-        {/* Header Section */}
+        {/* Header */}
         <div className="p-6 md:p-10 bg-gradient-to-r from-gray-900 to-cyan-900/50">
           <div className="flex items-center space-x-4">
 
             {/* Logo */}
-            <div className="p-3 rounded-xl bg-cyan-500/21 shadow-lg flex items-center justify-center">
+            <div className="p-3 rounded-xl bg-cyan-500/20 shadow-lg flex items-center justify-center">
               <img
                 src="/logo.png"
                 alt="NEXORA Logo"
@@ -63,8 +57,12 @@ const App = () => {
             </div>
 
             <div>
-              <h1 className="text-4xl md:text-5xl font-extrabold tracking-tight text-white">NEXORA CREW</h1>
-              <p className="text-lg font-medium text-cyan-400 mt-1">{profile.tagline}</p>
+              <h1 className="text-4xl md:text-5xl font-extrabold tracking-tight text-white">
+                NEXORACREW
+              </h1>
+              <p className="text-lg font-medium text-cyan-400 mt-1">
+                {profile.tagline}
+              </p>
             </div>
           </div>
 
@@ -74,81 +72,81 @@ const App = () => {
           </div>
         </div>
 
-        {/* Body Content */}
+        {/* Body */}
         <div className="p-6 md:p-10 space-y-12">
 
           {/* Contact Info */}
-          <div className="bg-gray-700/50 p-6 rounded-xl shadow-inner border border-gray-700 w-full">
-            <h2 className="text-2xl font-bold text-white mb-4 flex items-center">
-               Contact Info
-            </h2>
+          <div className="bg-gray-700/50 p-6 rounded-xl border border-gray-700">
+            <h2 className="text-2xl font-bold text-white mb-4">Contact Info</h2>
 
             <ul className="space-y-4">
               <li className="flex items-center text-gray-300">
                 <Mail className="w-5 h-5 mr-3 text-cyan-500" />
-                <a href={`mailto:${profile.email}`} className="hover:text-cyan-400 transition">
+                <a href={`mailto:${profile.email}`} className="hover:text-cyan-400">
                   {profile.email}
                 </a>
               </li>
 
               <li className="flex items-center text-gray-300">
                 <Phone className="w-5 h-5 mr-3 text-cyan-500" />
-                <a href={`tel:${profile.phone}`} className="hover:text-cyan-400 transition">
+                <a href={`tel:${profile.phone}`} className="hover:text-cyan-400">
                   {profile.phone}
                 </a>
               </li>
 
               <li className="flex items-start text-gray-300">
                 <MapPin className="w-5 h-5 mr-3 mt-1 text-cyan-500" />
-                <a 
-  href="https://maps.app.goo.gl/VUpAHD6bsMJE9kzw8" 
-  target="_blank"
-  rel="noreferrer"
-  className="hover:text-cyan-400 transition"
->
-  Palakkarai, Tiruchirappalli, Tamil Nadu
-</a>
-
+                <a
+                  href="https://maps.app.goo.gl/VUpAHD6bsMJE9kzw8"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="hover:text-cyan-400"
+                >
+                  {profile.location}
+                </a>
               </li>
             </ul>
           </div>
 
           {/* About Section */}
-          <div className="bg-gray-700/50 p-6 rounded-xl shadow-lg border border-gray-700">
-            <h2 className="text-3xl font-bold text-white mb-4 border-b border-cyan-600 pb-2">About NEXORA CREW</h2>
+          <div className="bg-gray-700/50 p-6 rounded-xl border border-gray-700">
+            <h2 className="text-3xl font-bold text-white mb-4 border-b border-cyan-600 pb-2">
+              About NEXORACREW
+            </h2>
             <p className="text-lg text-gray-300 leading-relaxed">
               {profile.about}
             </p>
           </div>
 
           {/* Services */}
-<div className="bg-gray-700/50 p-6 rounded-xl shadow-lg border border-gray-700">
-  <h2 className="text-3xl font-bold text-white mb-6 border-b border-cyan-600 pb-2">
-    Our Services
-  </h2>
+          <div className="bg-gray-700/50 p-6 rounded-xl border border-gray-700">
+            <h2 className="text-3xl font-bold text-white mb-6 border-b border-cyan-600 pb-2">
+              Our Services
+            </h2>
 
-  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-    {profile.services.map((service, index) => (
-      <div
-        key={index}
-        className="flex flex-col h-40 p-4 bg-gray-700 rounded-lg hover:bg-gray-600/70 transition duration-300 hover:shadow-xl"
-      >
-        <service.icon className="w-6 h-6 text-cyan-400 mb-2" />
-
-        <h3 className="text-lg font-semibold text-white">{service.name}</h3>
-
-        <p className="text-sm text-gray-400 mt-1 line-clamp-3">
-          {service.description}
-        </p>
-      </div>
-    ))}
-  </div>
-</div>
-
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              {profile.services.map((service, index) => (
+                <div
+                  key={index}
+                  className="flex flex-col h-40 p-4 bg-gray-700 rounded-lg hover:bg-gray-600/70 transition shadow"
+                >
+                  <service.icon className="w-6 h-6 text-cyan-400 mb-2" />
+                  <h3 className="text-lg font-semibold text-white">
+                    {service.name}
+                  </h3>
+                  <p className="text-sm text-gray-400 mt-1 line-clamp-3">
+                    {service.description}
+                  </p>
+                </div>
+              ))}
+            </div>
+          </div>
 
           {/* Official Links */}
-          <div className="bg-gray-700/50 p-6 rounded-xl shadow-lg border border-gray-700">
-            <h2 className="text-3xl font-bold text-white mb-6 border-b border-cyan-600 pb-2">Official Links</h2>
+          <div className="bg-gray-700/50 p-6 rounded-xl border border-gray-700">
+            <h2 className="text-3xl font-bold text-white mb-6 border-b border-cyan-600 pb-2">
+              Official Links
+            </h2>
 
             {/* Top Row */}
             <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
@@ -157,40 +155,73 @@ const App = () => {
                   key={index}
                   href={link.url}
                   target="_blank"
+                  rel="noreferrer"
                   className="flex flex-col items-center justify-center p-4 bg-gray-700 rounded-xl hover:bg-cyan-700/50 transition text-gray-300"
                 >
                   <link.icon className="w-8 h-8 mb-2 text-cyan-500" />
-                  <span className="text-xs font-medium text-center">{link.name}</span>
+                  <span className="text-xs font-medium text-center">
+                    {link.name}
+                  </span>
                 </a>
               ))}
             </div>
 
-            {/* Bottom Row – WhatsApp + Internship */}
-            <div className="flex justify-center gap-6 mt-6">
+            {/* Bottom Row – WhatsApp + Internship + YouTube + Telegram */}
+            <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 mt-6">
 
-              {/* WhatsApp Channel */}
+              {/* WhatsApp */}
               <a
                 href="https://whatsapp.com/channel/0029Vb6uR5u7dmeVhtkLSo2c"
                 target="_blank"
-                className="flex flex-col items-center justify-center p-4 bg-gray-700 rounded-xl hover:bg-gray-600/70 transition text-gray-300 shadow-md"
+                rel="noreferrer"
+                className="flex flex-col items-center p-4 bg-gray-700 rounded-xl hover:bg-gray-600/70 transition shadow"
               >
                 <MessageCircle className="w-8 h-8 mb-2 text-cyan-500" />
                 <span className="text-xs font-medium">WhatsApp Channel</span>
               </a>
 
-              {/* Student Internship Form */}
+              {/* Internship Form */}
               <a
                 href="https://docs.google.com/forms/d/e/1FAIpQLSflR-eG2DJXiHOThlXgeToIivo95GKEyZa0dhJDJFD2WbrWlA/viewform"
                 target="_blank"
-                className="flex flex-col items-center justify-center p-4 bg-gray-700 rounded-xl hover:bg-cyan-700/50 transition text-gray-300 shadow-md"
+                rel="noreferrer"
+                className="flex flex-col items-center p-4 bg-gray-700 rounded-xl hover:bg-cyan-700/50 transition shadow"
               >
                 <FileText className="w-8 h-8 mb-2 text-cyan-500" />
-                <span className="text-xs font-medium text-center">Student Internship Form</span>
+                <span className="text-xs font-medium text-center">
+                  Student Internship Form
+                </span>
+              </a>
+
+              {/* YouTube – cyan like others */}
+              <a
+                href="https://youtube.com/@nexoracrew-2606?si=ksFf6Fzab18EocqD"
+                target="_blank"
+                rel="noreferrer"
+                className="flex flex-col items-center p-4 bg-gray-700 rounded-xl hover:bg-gray-600/70 transition shadow"
+              >
+                <Youtube className="w-8 h-8 mb-2 text-cyan-500" />
+                <span className="text-xs font-medium text-center">
+                  YouTube Channel
+                </span>
+              </a>
+
+              {/* Telegram – cyan like others */}
+              <a
+                href="https://t.me/+_jL0_jV7krhiMzFl"
+                target="_blank"
+                rel="noreferrer"
+                className="flex flex-col items-center p-4 bg-gray-700 rounded-xl hover:bg-gray-600/70 transition shadow"
+              >
+                <Send className="w-8 h-8 mb-2 text-cyan-500" />
+                <span className="text-xs font-medium text-center">
+                  Telegram Community
+                </span>
               </a>
 
             </div>
-
           </div>
+
         </div>
       </div>
     </div>
