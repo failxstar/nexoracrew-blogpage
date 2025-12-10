@@ -15,7 +15,7 @@ const App = () => {
     tagline: 'Where Ideas Meet Innovation',
     
     about:
-      'NEXORA CREW is an emerging IT service and cybersecurity startup founded by engineering students with a passion for innovation, digital transformation, and secure technology solutions. We aim to bring modern, affordable, and growth-focused digital solutions to students, startups, and small businesses.',
+      'NEXORACREW is an emerging IT service and cybersecurity startup founded by engineering students with a passion for innovation, digital transformation, and secure technology solutions. We aim to bring modern, affordable, and growth-focused digital solutions to students, startups, and small businesses.',
     
     links: [
       { name: 'Official Website', url: 'https://nexoracrew.com/', icon: Globe },
