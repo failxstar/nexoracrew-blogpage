@@ -4,42 +4,64 @@
     <script src="https://cdn.tailwindcss.com"></script>
 
     <meta charset="utf-8" />
-    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#000000" />
+
+    <!-- ===== BASIC SITE META ===== -->
+    <title>Nexoracrew — Official Blog</title>
     <meta
       name="description"
-      content="Web site created using create-react-app"
+      content="Nexoracrew — student-driven IT, cybersecurity, web development, branding, AI automation, and digital innovation studio founded by engineering students."
     />
-    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
-    <!--
-      manifest.json provides metadata used when your web app is installed on a
-      user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
-    -->
-    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
-    <!--
-      Notice the use of %PUBLIC_URL% in the tags above.
-      It will be replaced with the URL of the `public` folder during the build.
-      Only files inside the `public` folder can be referencedfrom the HTML.
 
-      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
-      work correctly both with client-side routing and a non-root public URL.
-      Learn how to configure a non-root public URL by running `npm run build`.
-    -->
-    <title>Nexoracrew Blog</title>
+    <!-- ===== CANONICAL URL ===== -->
+    <link rel="canonical" href="https://nexoracrew.com/" />
+
+    <!-- ===== OPEN GRAPH (for Facebook, Google, LinkedIn, etc.) ===== -->
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:site_name" content="Nexoracrew" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Nexoracrew — Official Blog" />
+    <meta
+      property="og:description"
+      content="Nexoracrew — student-driven IT, cybersecurity, web development, branding, AI automation, and digital innovation studio."
+    />
+    <meta property="og:url" content="https://nexoracrew.com/" />
+    <meta property="og:image" content="/logo.png" />
+
+    <!-- ===== TWITTER META ===== -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Nexoracrew — Official Blog" />
+    <meta
+      name="twitter:description"
+      content="Nexoracrew — IT services, cybersecurity, branding, automation, and modern digital solutions."
+    />
+    <meta name="twitter:image" content="/logo.png" />
+
+    <!-- ===== STRUCTURED DATA (JSON-LD) ===== -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "Nexoracrew",
+        "url": "https://nexoracrew.com",
+        "logo": "https://nexoracrew.com/logo.png",
+        "sameAs": [
+          "https://www.instagram.com/nexoracrew",
+          "https://www.linkedin.com/in/nexora-crew-01842a396",
+          "https://youtube.com/@nexoracrew-2606"
+        ]
+      }
+    </script>
+
+    <!-- ===== ICONS & MANIFEST ===== -->
+    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
   </head>
+
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root"></div>
-    <!--
-      This HTML file is a template.
-      If you open it directly in the browser, you will see an empty page.
-
-      You can add webfonts, meta tags, or analytics to this file.
-      The build step will place the bundled scripts into the <body> tag.
-
-      To begin the development, run `npm start` or `yarn start`.
-      To create a production bundle, use `npm run build` or `yarn build`.
-    -->
   </body>
 </html>

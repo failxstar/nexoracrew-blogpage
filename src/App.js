@@ -51,7 +51,7 @@ const App = () => {
             <div className="p-3 rounded-xl bg-cyan-500/20 shadow-lg flex items-center justify-center">
               <img
                 src="/logo.png"
-                alt="NEXORA Logo"
+                alt="NEXORACREW Logo"
                 className="w-20 h-20 object-cover rounded-xl"
               />
             </div>
